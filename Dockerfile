@@ -4,8 +4,8 @@ FROM node:16-alpine as builder
 # Set working directory
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+# Copy package files from the frontend directory
+COPY frontend/package*.json ./
 
 # Install dependencies
 RUN npm install
