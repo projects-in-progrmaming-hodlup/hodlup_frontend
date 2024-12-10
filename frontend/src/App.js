@@ -34,18 +34,7 @@ function App() {
 
   // Use the REACT_APP_API_URL environment variable
   const API_URL = process.env.REACT_APP_API_URL;
-
-  // Error handling 
-  useEffect(() => {
-    if (!API_URL) {
-      setError("Backend API URL is not defined. Please check your configuration.");
-      return; // Don't proceed if the API URL is not available
-    }
-    fetchCryptocurrencies();
-    // Simulate sentiment analysis data fetching
-    // For now, we use dummy data initialized above
-  }, [API_URL, fetchCryptocurrencies]);
-
+  
   const fetchCryptocurrencies = useCallback(async () => {
     setLoading(true);
     try {
@@ -59,6 +48,17 @@ function App() {
       setLoading(false);
     }
   }, [API_URL]);
+
+  // Error handling 
+  useEffect(() => {
+    if (!API_URL) {
+      setError("Backend API URL is not defined. Please check your configuration.");
+      return; // Don't proceed if the API URL is not available
+    }
+    fetchCryptocurrencies();
+    // Simulate sentiment analysis data fetching
+    // For now, we use dummy data initialized above
+  }, [API_URL, fetchCryptocurrencies]);
 
   const handleSubmit = (data) => {
     setAlertData(data);
