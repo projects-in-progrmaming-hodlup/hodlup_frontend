@@ -34,6 +34,9 @@ function App() {
 
   // Use the REACT_APP_API_URL environment variable
   const API_URL = process.env.REACT_APP_API_URL;
+
+  // Log the API URL to check if it's being pulled correctly
+  console.log("API URL: ", API_URL);  // Log the environment variable
   
   const fetchCryptocurrencies = useCallback(async () => {
     setLoading(true);
