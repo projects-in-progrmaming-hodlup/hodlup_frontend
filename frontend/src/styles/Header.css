@@ -1,0 +1,39 @@
+/* src/styles/Header.css */
+.app-header {
+  background-color: #C99200;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  
+  
+  
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  
+}
+.logo {
+  height: 55px;
+  margin-right: 0px;
+}
+
+.app-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #090909;
+  font-size: 40px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.crypto-companion {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #090909;
+  
+}
