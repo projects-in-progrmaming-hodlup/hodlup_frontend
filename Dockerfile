@@ -8,8 +8,8 @@ WORKDIR /app
 COPY frontend/package*.json ./
 
 # Install dependencies
+ENV REACT_APP_API_URL=https://your-api-url.com
 RUN npm install
-
 
 # Copy the rest of the frontend directory
 COPY frontend/ ./
