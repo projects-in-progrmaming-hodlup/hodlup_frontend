@@ -32,7 +32,15 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+  // Use the REACT_APP_API_URL environment variable
+  const API_URL = process.env.REACT_APP_API_URL;
+
+  // Error handling if API_URL is not defined
+  if (!API_URL) {
+    console.error("Error: REACT_APP_API_URL is not defined. Please set the backend API URL.");
+    setError("Backend API URL is not defined. Please check your configuration.");
+    return;
+  }
 
   const fetchCryptocurrencies = useCallback(async () => {
     setLoading(true);
