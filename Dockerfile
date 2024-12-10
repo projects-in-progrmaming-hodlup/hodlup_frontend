@@ -10,8 +10,9 @@ COPY frontend/package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy all frontend files
-COPY . .
+
+# Copy the rest of the frontend directory
+COPY frontend/ ./
 
 # Build application
 ARG REACT_APP_API_URL
