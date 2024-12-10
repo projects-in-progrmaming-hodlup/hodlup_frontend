@@ -7,8 +7,13 @@ WORKDIR /app
 # Copy package files from the frontend directory
 COPY frontend/package*.json ./
 
+# Accept the build argument for API URL
+ARG REACT_APP_API_URL
+
+# Set the environment variable for React app build
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
+
 # Install dependencies
-ENV REACT_APP_API_URL=https://your-api-url.com
 RUN npm install
 
 # Copy the rest of the frontend directory
