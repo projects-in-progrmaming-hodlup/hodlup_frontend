@@ -33,7 +33,7 @@ function App() {
   const [error, setError] = useState(null);
 
   // Use the REACT_APP_API_URL environment variable
-  const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = "https://hodlup-backend-147516047876.us-central1.run.app"
 
   // Log the API URL to check if it's being pulled correctly
   console.log("API URL: ", API_URL);  // Log the environment variable
