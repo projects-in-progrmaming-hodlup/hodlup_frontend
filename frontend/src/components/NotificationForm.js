@@ -19,7 +19,7 @@ const NotificationForm = ({ onSubmit, cryptocurrencies }) => {
   const [phoneSuccess, setPhoneSuccess] = useState(null);
   const [phoneError, setPhoneError] = useState('');
 
-  const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+  const API_URL = "https://hodlup-backend-147516047876.us-central1.run.app"; 
 
   const validatePhoneNumber = (number) => {
     const phoneRegex = /^\+1\d{10}$/;
