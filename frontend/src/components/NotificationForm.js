@@ -88,8 +88,8 @@ const NotificationForm = ({ onSubmit, cryptocurrencies }) => {
   };
 
   const handleSetAlert = async () => {
-    if (!thresholdValue) {
-      setError("Threshold value is required.");
+    if (!thresholdValue && !lowerThresholdValue) {
+      setError("At least one threshold value is required.");
       return;
     }
 
